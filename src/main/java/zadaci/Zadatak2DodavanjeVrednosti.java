@@ -63,7 +63,7 @@ public class Zadatak2DodavanjeVrednosti {
                 System.out.println(r);
             }
 
-            
+
 
         } catch (Exception e) {
             e.printStackTrace();
