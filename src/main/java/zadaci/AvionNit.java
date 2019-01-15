@@ -109,7 +109,21 @@ public class AvionNit extends Thread{
                Thread t = (new AvionNit(a));
                 threads.add(t);
                 t.start();
+
             }
+
+            try {
+                for (Thread t: threads) {
+                    t.join();
+                }
+
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+
+
+            System.out.println("Svi avionu su poleteli");
 
         } catch (Exception e) {
             e.printStackTrace();
